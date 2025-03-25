@@ -11,8 +11,13 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
-    <body background="images/contacto.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
+    <body background="images/base.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
 
+        <header>
+            <img src="images/perfilx.gif" alt="..." />
+            <h1 style="color:orange" >&nbsp;&nbsp;HABILIDADES</h1>
+        </header>
+        
         <nav class="nav">
             <a class="nav-link" href="index.html">INICIO</a>
             <a class="nav-link" href="proyectos.jsp">PROYECTOS</a>    
@@ -20,8 +25,6 @@
             <a class="nav-link" href="contacto.jsp">CONTACTO</a>
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </nav>
-
-        <h1 style="color:orange" >&nbsp;&nbsp;HABILIDADES</h1>
 
         <table border="0" style="width: 80%" align="center">
             <tr>

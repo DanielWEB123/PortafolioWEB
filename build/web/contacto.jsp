@@ -9,20 +9,22 @@
         <title>CONTACTO - DCR</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, maximum-scale =1.0">
+        <meta name="viewport" content="width=device=width, initial-scale=1">
     </head>
 
-    <body background="images/contacto.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
+    <body background="images/base.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
 
+        <header>
+            <img src="images/perfilx.gif" alt="..." />
+            <h1 style="color:orange" >&nbsp;&nbsp;CONTACTO</h1>
+        </header>
+        
         <nav class="nav">
             <a class="nav-link" href="index.html">INICIO</a>
             <a class="nav-link" href="proyectos.jsp">PROYECTOS</a>    
             <a class="nav-link" href="habilidades.jsp">HABILIDADES</a>
             <a class="nav-link" href="experiencia.jsp">EXPERIENCIA</a>
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </nav>
-
-        <h1 style="color:orange" >&nbsp;&nbsp;CONTACTO</h1>
 
         
         <table border="0" style="width: 80%" align="center">
@@ -107,7 +109,7 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="width: 26px; color:white; text-align: left"> &nbsp;&nbsp;&nbsp;&nbsp; (*) Campos requeridos</td>
+                            <td colspan="2" style="width: 26px; color:white; text-align: left"> &nbsp; (*) Campos requeridos</td>
                             <td></td>
                             <td>
                                 <div class="col-sm-10">
@@ -134,7 +136,7 @@
         <tr>
             <td valign="top">
 
-                <table border="0" style="width: 95%" align="center">
+                <table border="0" style="width: 80%" align="center">
                     <tr>
                         <td><h2 style="color: aqua" >Suscritos:</h2></td>
                     </tr>
@@ -159,9 +161,8 @@
                     <% while (rs.next()) {%>
 
                     <tr style="color:white">
-                        <td> <%= rs.getString("nombre")%> </td>
-                        <td> <%= rs.getString("correo")%> </td>
-                        <td> <%= rs.getString("comentario")%> </td>
+                        <td> <h5><%= rs.getString("nombre")%></h5></td>
+                        <td> <h5><%= rs.getString("correo")%></h5> </td>
                     </tr>
 
                     <% }%>
@@ -171,7 +172,6 @@
             </td>
 
     </table>
-
                     
     <br>&nbsp;&nbsp;<footer style="color:white;"> © Desarrollado para IPChile </footer>
 
