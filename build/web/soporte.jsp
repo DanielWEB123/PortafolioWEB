@@ -13,7 +13,7 @@
 
     <body background="images/base.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
 
-        <h2 style="color: aqua" >&nbsp;&nbsp;Programación:</h2> <br>
+        <h2 style="color: aqua" >&nbsp;&nbsp;Soporte:</h2> <br>
 
         <table border="0" style="width: 95%" align="center">
 
@@ -29,7 +29,7 @@
                 PreparedStatement ps;
                 ResultSet rs;
 
-                ps = con.prepareStatement("select * from proyectos where item = 'prog'");
+                ps = con.prepareStatement("select * from proyectos where item = 'soporte'");
                 rs = ps.executeQuery();
 
             %>
