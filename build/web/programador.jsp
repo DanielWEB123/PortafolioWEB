@@ -7,59 +7,47 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PROGRAMACION - DCR</title>
-
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/normalize.css">
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
-
     <body background="images/base.jpg" style="background-color:#000050 background-position: center; background-size: cover; background-repeat:no-repeat; max-width: 100%; max-height: 100%;">
 
+        <br>
+        <h2 style="color: aqua" >&nbsp;Programación:</h2>
 
+        <table class="table table-hover">
 
-        <h5 style="color: aqua" >&nbsp;&nbsp;Programación:</h5> <br>
+            <tbody>
 
-        
+                <%
+                    Connection con;
+                    String url = "jdbc:mysql://localhost:3306/bd_portafolio";
+                    String Driver = "com.mysql.jdbc.Driver";
+                    String user = "root";
+                    String clave = "dan123";
+                    Class.forName(Driver);
+                    con = DriverManager.getConnection(url, user, clave);
 
-                    <table border="1" style="width: 95%" align="center">
+                    PreparedStatement ps;
+                    ResultSet rs;
 
-                        <caption>sdfdsfdsf</caption>
-                        
-                        
-                        <%
-                            Connection con;
-                            String url = "jdbc:mysql://localhost:3306/bd_portafolio";
-                            String Driver = "com.mysql.jdbc.Driver";
-                            String user = "root";
-                            String clave = "dan123";
-                            Class.forName(Driver);
-                            con = DriverManager.getConnection(url, user, clave);
+                    ps = con.prepareStatement("select * from proyectos where item = 'prog'");
+                    rs = ps.executeQuery();
 
-                            PreparedStatement ps;
-                            ResultSet rs;
+                %>
 
-                            ps = con.prepareStatement("select * from proyectos where item = 'prog'");
-                            rs = ps.executeQuery();
+                <% while (rs.next()) {%>
 
-                        %>
+                <tr style="color:white">
+                    <td > <%= rs.getString("nombre")%></td>
+                    <td > <%= rs.getString("descripcion")%> </td>
+                </tr>
 
-                        <% while (rs.next()) {%>
+                <% }%>
 
-                        <tr style="color:white">
-                            <td style="width: 25%"> <%= rs.getString("nombre")%> <br><br></td>
-                            <td style="width: 75%"> <%= rs.getString("descripcion")%> <br><br></td>
-                        </tr>
-
-                        <% }%>
-
-
-                    </table>
-
-
-
-
-
-
+            </tbody>
+        </table>
 
         <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
